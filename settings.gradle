@@ -1,6 +1,6 @@
 rootProject.name = 'spring-cloud-study'
 
-file('eureka-ex').eachDir {
+file('simple-project').eachDir {
     include(":${it.name}")
     project(":${it.name}").projectDir = it
 }
