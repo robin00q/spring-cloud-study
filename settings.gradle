@@ -4,3 +4,8 @@ file('eureka-ex').eachDir {
     include(":${it.name}")
     project(":${it.name}").projectDir = it
 }
+
+file('gateway-ex').eachDir {
+    include(":${it.name}")
+    project(":${it.name}").projectDir = it
+}
