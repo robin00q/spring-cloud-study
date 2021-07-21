@@ -10,6 +10,16 @@ dependencies {
 
     // devtools
     implementation 'org.springframework.boot:spring-boot-devtools'
+
+    // security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // database
+    runtimeOnly 'com.h2database:h2:1.3.176'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // mapper
+    implementation 'org.modelmapper:modelmapper:2.3.8'
 }
 
 dependencyManagement {
