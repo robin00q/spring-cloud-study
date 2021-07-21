@@ -8,6 +8,7 @@ import com.example.userservice.vo.ResponseUser;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,18 +24,19 @@ public class UserController {
 
     private final Greeting greeting;
     private final UserService userService;
+    private final Environment env;
 
-    @GetMapping("/health_check")
+    @GetMapping("/user-service/health_check")
     public String status() {
-        return "It's Working in User Service";
+        return String.format("It's Working in User Service on PORT %s", env.getProperty("local.server.port"));
     }
 
-    @GetMapping("/welcome")
+    @GetMapping("/user-service/welcome")
     public String welcome() {
         return greeting.getMessage();
     }
 
-    @PostMapping("/users")
+    @PostMapping("/user-service/users")
     public ResponseEntity<ResponseUser> createUser(@RequestBody RequestUser user) {
         ModelMapper mapper = new ModelMapper();
         mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);

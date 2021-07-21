@@ -25,14 +25,14 @@ public class LoggingFilter extends AbstractGatewayFilterFactory<LoggingFilter.Co
 //            final ServerHttpRequest request = exchange.getRequest();
 //            final ServerHttpResponse response = exchange.getResponse();
 //
-//            log.info("Global Filter baseMessage: {}", config.getBaseMessage());
+//            log.info("Global Filter baseMessage: {}", com.example.servicegateway.config.getBaseMessage());
 //
-//            if(config.isPreLogger()) {
+//            if(com.example.servicegateway.config.isPreLogger()) {
 //                log.info("Global Filter Start: request id -> {}", request.getId());
 //            }
 //
-//            return chain.filter(exchange).then(Mono.fromRunnable(() -> {
-//                if(config.isPostLogger()) {
+//            return chain.com.example.servicegateway.filter(exchange).then(Mono.fromRunnable(() -> {
+//                if(com.example.servicegateway.config.isPostLogger()) {
 //                    log.info("Global Filter End: response code -> {}", response.getStatusCode());
 //                }
 //            }));
