@@ -17,6 +17,8 @@ dependencies {
 
     // mapper
     implementation 'org.modelmapper:modelmapper:2.3.8'
+
+    implementation 'org.springframework.kafka:spring-kafka'
 }
 
 dependencyManagement {
