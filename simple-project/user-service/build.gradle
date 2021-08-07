@@ -12,6 +12,8 @@ dependencies {
     // actuator
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
+    implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
+
     // web
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
