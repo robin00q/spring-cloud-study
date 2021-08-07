@@ -8,4 +8,5 @@ spring:
     config:
       server:
         git:
-          uri: file:///Users/we/study_workspace/spring-cloud-config
+#          uri: file:///Users/we/study_workspace/spring-cloud-config
+          uri: https://github.com/robin00q/spring-cloud-config
