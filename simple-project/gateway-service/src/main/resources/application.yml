@@ -66,6 +66,3 @@ management:
     web:
       exposure:
         include: gateway
-
-token:
-  secret: user_token
