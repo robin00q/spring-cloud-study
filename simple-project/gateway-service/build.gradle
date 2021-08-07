@@ -4,7 +4,13 @@ jar { enabled = false }
 dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
+
+    // actuator
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    // config
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
 
     // jwt
     implementation 'io.jsonwebtoken:jjwt:0.9.1'
